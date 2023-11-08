@@ -26,7 +26,9 @@ const Header: React.FC = () => {
             placeholder="Search"
           />
         </div>
-        <div className="hidden max-[1025px]:block flex-col text-center w-fit px-5 ">
+      </div>
+      <div className="flex align-center justify-evenly items-center">
+        <div className="hidden max-[1025px]:block cursor-pointer flex-col text-center w-fit px-5 max-[660px]:px-2">
           <SearchIcon
             sx={{ color: "#666666", fontSize: 30 }}
             className="hover:text-black"
@@ -35,8 +37,6 @@ const Header: React.FC = () => {
             Search
           </h2>
         </div>
-      </div>
-      <div className="flex align-center justify-evenly items-center">
         <div className="flex-col text-center w-fit px-5 max-[660px]:px-2 cursor-pointer">
           <HomeIcon
             sx={{ color: "#666666", fontSize: 30 }}
