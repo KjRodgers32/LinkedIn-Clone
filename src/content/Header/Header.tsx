@@ -18,13 +18,22 @@ const Header: React.FC = () => {
           alt="logo"
           className="w-[2rem] h-[2rem]"
         />
-        <div className="flex align-center bg-[#edf3f8] border-none outline-none items-center w-10/12">
+        <div className="flex align-center bg-[#edf3f8] border-none outline-none items-center w-10/12 max-[1025px]:hidden">
           <SearchIcon fontSize="small" />
           <input
             type="text"
-            className="border-none outline-none bg-[#edf3f8] pl-1 h-[2rem] w-full"
+            className="border-none outline-none bg-[#edf3f8] pl-1 h-[2rem] w-full max-[1025px]:hidden"
             placeholder="Search"
           />
+        </div>
+        <div className="hidden max-[1025px]:block flex-col text-center w-fit px-5 ">
+          <SearchIcon
+            sx={{ color: "#666666", fontSize: 30 }}
+            className="hover:text-black"
+          />
+          <h2 className="text-[#666666] font-light text-xs max-md:hidden">
+            Search
+          </h2>
         </div>
       </div>
       <div className="flex align-center justify-evenly items-center">
