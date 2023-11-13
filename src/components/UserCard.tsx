@@ -1,5 +1,12 @@
 import React from "react"
 
+// interface IProps {
+//   first_name: string
+//   last_name: string
+//   job_title: string
+//   company: string
+// }
+
 const UserCard: React.FC = () => {
   return (
     <div className="w-full flex-col bg-[#fff]">

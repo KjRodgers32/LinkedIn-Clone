@@ -1,18 +1,29 @@
-import UserCard from "./components/UserCard"
+//import UserCard from "./components/UserCard"
 import Header from "./content/Header/Header"
-import { useUsers } from "./hooks/useUsers"
+//import { useUsers } from "./hooks/useUsers"
+import { useFetchPosts } from "./hooks/useFetchPosts"
 
-interface userData {
-  last_name: string
-  first_name: string
-  job_title: string
-  coompany: string
+// interface userData {
+//   last_name: string
+//   first_name: string
+//   job_title: string
+//   coompany: string
+// }
+
+interface Posts {
+  created_at: Date
+  userId: string
+  message: string
 }
 
 const App = () => {
-  const data = useUsers()
-  data?.forEach((doc) => {
-    console.log(doc.data() as userData)
+  // const data = useUsers()
+  // data?.forEach((doc) => {
+  //   console.log(doc.data() as userData)
+  // })
+  const posts = useFetchPosts()
+  posts?.forEach((doc) => {
+    console.log(doc.data() as Posts)
   })
   return (
     <div>
