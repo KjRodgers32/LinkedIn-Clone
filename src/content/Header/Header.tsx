@@ -11,9 +11,11 @@ import {
   MoreHorizIcon,
 } from "../../assets/icons"
 
+import { NavContainer, NavIcons, NavText } from "../../components/UI/Navbar"
+
 const Header: React.FC = () => {
   return (
-    <div className="w-full flex align-center py-[.5rem] bg-[#fff] justify-center">
+    <NavContainer>
       <div className="flex align-center text-center items-center gap-2 p-1">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/640px-LinkedIn_logo_initials.png"
@@ -35,66 +37,52 @@ const Header: React.FC = () => {
             sx={{ color: "#666666", fontSize: 30 }}
             className="hover:text-black"
           />
-          <h2 className="text-[#666666] font-light text-xs max-md:hidden">
-            Search
-          </h2>
+          <NavText>Search</NavText>
         </div>
-        <div className="flex-col text-center w-fit px-5 max-[660px]:px-2 cursor-pointer">
+        <NavIcons>
           <HomeIcon
             sx={{ color: "#666666", fontSize: 30 }}
             className="hover:text-black"
           />
-          <h2 className="text-[#666666] font-light text-xs max-md:hidden">
-            Home
-          </h2>
-        </div>
+          <NavText>Home</NavText>
+        </NavIcons>
         <div className="flex-col text-center w-fit px-5 max-[660px]:px-2 cursor-pointer whitespace-nowrap">
           <PeopleAltIcon
             sx={{ color: "#666666", fontSize: 30 }}
             className="hover:text-black"
           />
-          <h2 className="text-[#666666] font-light text-xs max-md:hidden">
-            My Network
-          </h2>
+          <NavText>My Network</NavText>
         </div>
-        <div className="flex-col text-center w-fit px-5 max-[660px]:px-2 cursor-pointer">
+        <NavIcons>
           <BusinessCenterIcon
             sx={{ color: "#666666", fontSize: 30 }}
             className="hover:text-black"
           />
-          <h2 className="text-[#666666] font-light text-xs max-md:hidden">
-            Jobs
-          </h2>
-        </div>
-        <div className="flex-col text-center w-fit px-5 max-[660px]:px-2 cursor-pointer">
+          <NavText>Jobs</NavText>
+        </NavIcons>
+        <NavIcons>
           <InsertCommentIcon
             sx={{ color: "#666666", fontSize: 30 }}
             className="hover:text-black"
           />
-          <h2 className="text-[#666666] font-light text-xs max-md:hidden">
-            Messaging
-          </h2>
-        </div>
-        <div className="flex-col text-center w-fit px-5 max-[660px]:px-2 cursor-pointer">
+          <NavText>Messaging</NavText>
+        </NavIcons>
+        <NavIcons>
           <NotificationsIcon
             sx={{ color: "#666666", fontSize: 30 }}
             className="hover:text-black"
           />
-          <h2 className="text-[#666666] font-light text-xs max-md:hidden">
-            Notifications
-          </h2>
-        </div>
-        <div className="flex-col text-center w-fit px-5 max-[660px]:px-2 cursor-pointer">
+          <NavText>Notifications</NavText>
+        </NavIcons>
+        <NavIcons>
           <PersonIcon
             sx={{ color: "#666666", fontSize: 30 }}
             className="hover:text-black"
           />
-          <h2 className="text-[#666666] font-light text-xs max-md:hidden">
-            Me
-          </h2>
-        </div>
+          <NavText>Me</NavText>
+        </NavIcons>
         <div className="border-l-[1px] text-color[#000000] h-full"></div>
-        <div className="flex-col text-center w-fit px-5 max-[660px]:px-2 cursor-pointer">
+        <NavIcons>
           <AppsIcon
             sx={{ color: "#666666", fontSize: 30 }}
             className="hover:text-black max-[520px]:hidden"
@@ -106,9 +94,9 @@ const Header: React.FC = () => {
           <h2 className="text-[#666666] font-light text-xs max-md:hidden whitespace-nowrap">
             For Business
           </h2>
-        </div>
+        </NavIcons>
       </div>
-    </div>
+    </NavContainer>
   )
 }
 
