@@ -10,7 +10,7 @@ import { db } from "../firebase"
 type userData = QuerySnapshot<DocumentData, DocumentData>
 
 export const useUsers = () => {
-  const [users, setUsers] = useState<userData | null>(null)
+  const [users, setUsers] = useState<userData | undefined>(undefined)
 
   useEffect(() => {
     const fetchUsers = async () => {

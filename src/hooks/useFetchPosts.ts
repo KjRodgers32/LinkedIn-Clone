@@ -10,7 +10,7 @@ import { db } from "../firebase"
 type usePosts = QuerySnapshot<DocumentData, DocumentData>
 
 export const useFetchPosts = () => {
-  const [posts, setPosts] = useState<usePosts | null>(null)
+  const [posts, setPosts] = useState<usePosts | undefined>(undefined)
 
   useEffect(() => {
     const fetchPosts = async () => {
